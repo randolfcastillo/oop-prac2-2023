@@ -6,7 +6,7 @@ extern int palindrome_sum(int[],int);
 
 
 int main(){
-    int integers[6]={1,0,0,0,0,0,1};
+    int integers[6]={1,0,0,0,0,1};
    int size=6;
 
    std :: cout << "Is it a palindrome: " << is_array_palindrome(integers,size) << std :: endl;

@@ -3,6 +3,11 @@
 bool is_array_palindrome(int integers[], int length){
 bool palindrome=false;
 if (length>=1){
+    for(int i=0;i<length/2;i++){
+
+    
+ 
+    
  for (int i=0; i<length/2;i++){
     if (integers[i]==integers[length-i]){
         palindrome=true;
@@ -11,12 +16,13 @@ if (length>=1){
      
  }
  }
-
+}
  else{
     palindrome=false;
  }
 return palindrome;
 }
+
 
 
 int sum_integers(int integers[], int length){
