@@ -3,18 +3,18 @@
 bool is_array_palindrome(int integers[], int length){
 bool palindrome=false;
 if (length>=1){
-    for(int i=0;i<length/2;i++){
+  //  for(int i=0;i<length/2;i++){
 
     
  
     
  for (int i=0; i<length/2;i++){
-    if (integers[i]==integers[length-i]){
+    if (integers[i]==integers[length-i-1]){
         palindrome=true;
     
        }
      
- }
+ //}
  }
 }
  else{
