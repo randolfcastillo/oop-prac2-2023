@@ -21,7 +21,7 @@ for(int i=0;i<capacity_max; i++){
 
 };
 
-Store :: int get_Stock_Count(int item_code){
+int Store ::  get_Stock_Count(int item_code){
     return stock;
 }
 
