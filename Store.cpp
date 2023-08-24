@@ -13,11 +13,13 @@ items=new StockItem[capacity_max];
 }
 
 int Store :: get_Total_Stock_Count(){
-for(i=0;i<capacity_max< i++){
-    if 
+for(int i=0;i<capacity_max< i++){
+    if (stock<capacity_max){
+        stock++;
+    }
 }
 
-}
+};
 
 int get_Stock_Count(int item_code){
     
@@ -25,4 +27,13 @@ int get_Stock_Count(int item_code){
 
 StockItem* Store:: get_Stock_List(){
 
+}
+
+bool Store :: add_Stock(StockItem new_stock){
+for (int i=0;i<capacity_max<i++){
+if (stock<capacity_max){
+    
+   return true; 
+}
+}
 }
