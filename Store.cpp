@@ -19,7 +19,8 @@ int Store :: get_Total_Stock_Count(){
 
 
 int Store ::  get_Stock_Count(int item_code){
-    return stock;
+    
+    return stock-1;
 }
 
 StockItem* Store:: get_Stock_List(){
