@@ -18,7 +18,7 @@ int Orchestra :: get_current_number_of_members(){
 
 bool Orchestra :: add_musician(Musician new_musician){
     if (current_members<size1){
-        list1[current_members] = new_musician;
+    list1[current_members] = new_musician;
         current_members++;
         return true;
     }
