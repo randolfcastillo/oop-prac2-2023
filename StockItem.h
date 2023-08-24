@@ -6,7 +6,7 @@ private:
 int barcode; 
 std :: string item_name;
 public:
-int barcode2; 
+//int barcode2; 
 StockItem();                  
 StockItem(int code_num, std::string description);      
 std::string get_description();    // returns the item description
