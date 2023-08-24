@@ -21,8 +21,8 @@ for(int i=0;i<capacity_max; i++){
 
 };
 
-int get_Stock_Count(int item_code){
-    
+Store :: int get_Stock_Count(int item_code){
+    return stock;
 }
 
 StockItem* Store:: get_Stock_List(){
@@ -35,5 +35,6 @@ if (stock<capacity_max){
 
    return true; 
 }
+
 }
 }
