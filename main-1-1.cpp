@@ -11,3 +11,9 @@ std :: cout << "The item is a: "<<chair.get_description()<<" and the barcode is:
 
 return 0;
 }
+
+
+
+
+
+

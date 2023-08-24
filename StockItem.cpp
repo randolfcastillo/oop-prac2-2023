@@ -16,3 +16,6 @@ StockItem:: StockItem(int code_num, std::string description){
 int StockItem:: get_item_code() {return barcode;} ;     
 StockItem :: ~StockItem(){            
 }
+
+
+
