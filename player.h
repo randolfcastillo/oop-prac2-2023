@@ -6,10 +6,10 @@
 class Player{
 protected: 
 std::string name;
-std:: string inputname;
+//std:: string inputname;
 int health;
-int current_health;
-int current_damage;
+//int current_health;
+//int current_damage;
 int damage;
 
 
@@ -18,7 +18,8 @@ public:
 Player(std::string name, int health, int damage);
  void attack(Player* opponent, int damage);
  void takeDamage(int damage);
-
+std::string getName();
+int getHealth();
 };
 
 #endif

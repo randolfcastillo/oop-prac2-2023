@@ -8,9 +8,9 @@ Player:: Player(){
 }
 */
 Player :: Player(std::string name, int health, int damage){
-    inputname=name;
-    current_health=health;
-    current_damage=damage;
+    this->name=name;
+    this->health=health;
+    this->damage=damage;
 }
 
 void Player ::  attack(Player* opponent, int damage){
@@ -19,4 +19,12 @@ opponent ->takeDamage(damage);
 
 void Player :: takeDamage(int damage){
     health=health-damage;
+}
+
+std::string Player :: getName(){
+    return name;
+}
+
+int Player :: getHealth(){
+    return health;
 }

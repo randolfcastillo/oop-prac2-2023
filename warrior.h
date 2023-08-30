@@ -4,9 +4,10 @@
 class Warrior : public Player {
  
 private: 
-std :: string name; 
+/*std :: string name; 
 int health;
 int damage;
+*/
 std::string weapon;
 public:
 Warrior(std::string name, int health, int damage, std:: string weapon);
@@ -15,6 +16,7 @@ Warrior(std::string name, int health, int damage, std:: string weapon);
 void swingWeapon(Player* opponent);
 std :: string getName();
 int getHealth();
+
 
 };
 #endif

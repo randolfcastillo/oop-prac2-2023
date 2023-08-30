@@ -8,10 +8,6 @@
 
 
 Wizard :: Wizard(std::string name, int health, int damage, int mana): Player(name, health, damage), mana(mana){
-    inputname=name;
-    current_health=health;
-    current_damage=damage;
-    this->mana=mana;
 }
 
 /*void Player ::  attack(Player* opponent, int damage){
@@ -24,7 +20,10 @@ void Player :: takeDamage(int damage){
 */
 void Wizard :: castSpell(Player*opponent){
     opponent->takeDamage(mana);
+    std::cout << name << " casts a spell on " << opponent->getName() << " for " << damage << " damage.\n";
+
 }
+
 
 std:: string Wizard :: getName(){
     return name;
