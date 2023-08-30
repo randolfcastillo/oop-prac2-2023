@@ -8,7 +8,7 @@ int ID;
 public:
 Vehicle(int ID);
 int getID();
-virtual int getParkingDuration();
+virtual int getParkingDuration()=0;
 };
 
 
