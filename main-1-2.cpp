@@ -1,54 +1,57 @@
 #include <iostream>
-#include "Vehicle.h"
-#include "Car.h"
+#include <string>
+
 #include "Bus.h"
+#include "Car.h"
 #include "Motorbike.h"
 #include "ParkingLot.h"
 
 int main() {
-    ParkingLot parkingLot(10);
-    int vehicleIdCounter = 1;
-    int numVehicles=10;
-     int numValidVehicles = 0; 
-      Vehicle** vehicles = new Vehicle*[numVehicles];
-     for (int i = 0; i < numVehicles; ++i) {
-        int vehicleType;
-        std::cout << "Enter the type of vehicle (1: Car, 2: Bus, 3: Motorbike): ";
-        std::cin >> vehicleType;
+  ParkingLot parkingLot(10);
 
-        int vehicleID;
-        std::cout << "Enter the ID of the vehicle: ";
-        std::cin >> vehicleID;
+  char vehicleType;
+  int id;
 
-        Vehicle* newVehicle = nullptr;
+  while (parkingLot.getCount() < 10) {
+    std::cout << "Enter vehicle type (C for Car, B for Bus, M for Motorbike): ";
+    std::cin >> vehicleType;
 
-        switch (vehicleType) {
-            case 1:
-                newVehicle = new Car(vehicleID);
-                break;
-            case 2:
-                newVehicle = new Bus(vehicleID);
-                break;
-            case 3:
-                newVehicle = new Motorbike(vehicleID);
-                break;
-            default:
-                std::cout << "Invalid vehicle type. Skipping..." << std::endl;
-                break;
-        }
-
-        if (newVehicle != nullptr) {
-            vehicles[numValidVehicles++] = newVehicle;
-        }
+    if (vehicleType == 'C' || vehicleType == 'c') {
+      std::cout << "Enter vehicle ID: ";
+      std::cin >> id;
+      Car car(id);
+      if (!parkingLot.parkVehicle(&car)) {
+        std::cout << "Failed to park the car." << std::endl;
+      }
+    } else if (vehicleType == 'B' || vehicleType == 'b') {
+      std::cout << "Enter vehicle ID: ";
+      std::cin >> id;
+      Bus bus(id);
+      if (!parkingLot.parkVehicle(&bus)) {
+        std::cout << "Failed to park the bus." << std::endl;
+      }
+    } else if (vehicleType == 'M' || vehicleType == 'm') {
+      std::cout << "Enter vehicle ID: ";
+      std::cin >> id;
+      Motorbike motorbike(id);
+      if (!parkingLot.parkVehicle(&motorbike)) {
+        std::cout << "Failed to park the motorbike." << std::endl;
+      }
+    } else {
+      std::cout << "Invalid vehicle type." << std::endl;
     }
+  }
 
-for (int i = 0; i < numValidVehicles; ++i) {
-    parkingLot.parkVehicle(vehicles[i]);
-}
-    int unparkId;
-    std::cout << "Enter the ID of the vehicle you want to unpark: ";
-    std::cin >> unparkId;
-    parkingLot.unparkVehicle(unparkId);
+  std::cout << "Parking lot is full." << std::endl;
 
-    return 0;
+  std::cout << "Enter vehicle ID to unpark: ";
+  std::cin >> id;
+  if (parkingLot.unparkVehicle(id)) {
+    std::cout << "Vehicle with ID " << id << " has been unparked." << std::endl;
+  } else {
+    std::cout << "Vehicle with ID " << id << " not found in the lot."
+              << std::endl;
+  }
+
+  return 0;
 }
