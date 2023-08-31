@@ -7,3 +7,7 @@ int Car :: getParkingDuration(){
     time_difference=0.9*time_difference;
     return time_difference;
  }
+
+ Car::Car(int ID){
+    this->ID=ID;
+ }

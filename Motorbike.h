@@ -8,6 +8,7 @@ class Motorbike : public Vehicle{
    // std::time_t timeOfEntry=time(nullptr);
     public:
    int getParkingDuration();
+   Motorbike(int ID);
 };
 
 #endif

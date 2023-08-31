@@ -7,6 +7,7 @@ class Bus : public Vehicle{
     protected:
    // std::time_t timeOfEntry=time(nullptr);
     public:
+    Bus(int ID);
    int getParkingDuration();
 };
 

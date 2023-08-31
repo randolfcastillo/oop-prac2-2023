@@ -7,3 +7,7 @@ int Bus :: getParkingDuration(){
     time_difference=0.75*time_difference;
     return time_difference;
  }
+
+ Bus :: Bus(int ID){
+    this->ID=ID;
+ }

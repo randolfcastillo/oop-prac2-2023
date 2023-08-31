@@ -7,3 +7,7 @@ int Motorbike :: getParkingDuration(){
     time_difference=0.85*time_difference;
     return time_difference;
  }
+
+ Motorbike::Motorbike(int ID){
+    this->ID=ID;
+ }
