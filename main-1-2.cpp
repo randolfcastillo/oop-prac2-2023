@@ -10,6 +10,7 @@ int main() {
   ParkingLot parkingLot(10);
 
   char vehicleType;
+  
   int id;
 
   while (parkingLot.getCount() < 10) {
@@ -23,6 +24,7 @@ int main() {
       if (!parkingLot.parkVehicle(&car)) {
         std::cout << "Failed to park the car." << std::endl;
       }
+
     } else if (vehicleType == 'B' || vehicleType == 'b') {
       std::cout << "Enter vehicle ID: ";
       std::cin >> id;
@@ -30,6 +32,9 @@ int main() {
       if (!parkingLot.parkVehicle(&bus)) {
         std::cout << "Failed to park the bus." << std::endl;
       }
+
+
+
     } else if (vehicleType == 'M' || vehicleType == 'm') {
       std::cout << "Enter vehicle ID: ";
       std::cin >> id;
@@ -42,6 +47,9 @@ int main() {
     }
   }
 
+
+
+
   std::cout << "Parking lot is full." << std::endl;
 
   std::cout << "Enter vehicle ID to unpark: ";
@@ -52,6 +60,8 @@ int main() {
     std::cout << "Vehicle with ID " << id << " not found in the lot."
               << std::endl;
   }
+
+
 
   return 0;
 }
