@@ -40,6 +40,7 @@ void ParkingLot :: unparkVehicle(int ID){
         if(vehicles[i]->getID()==ID){
            delete vehicles[i];
            vehicles[i]=vehicles[--count];
+         //  std :: cout << "Removed." << std :: endl;
            return;
         }
     }
