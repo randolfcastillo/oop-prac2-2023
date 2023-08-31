@@ -16,7 +16,7 @@ class ParkingLot{
    int getCount();
    ParkingLot(int capacity);
 
-   //bool full();
+   bool full();
    bool parkVehicle(Vehicle* Vehicle);
    void unparkVehicle(int ID);
 

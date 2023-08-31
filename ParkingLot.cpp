@@ -12,6 +12,14 @@ ParkingLot :: ParkingLot (int capacity){
      vehicles = new Vehicle*[capacity];
 }
 
+bool ParkingLot :: full(){
+    if (count>=capacity){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
 bool  ParkingLot :: parkVehicle(Vehicle* Vehicle){
     if (count<capacity){
