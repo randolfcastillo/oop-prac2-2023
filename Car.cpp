@@ -6,7 +6,7 @@ int Car :: getParkingDuration(){
     int time_difference=std::difftime(time,timeOfEntry);
     time_difference=0.9*time_difference;
 
-    return time_difference-1;
+    return time_difference;
  }
 
  Car::Car(int ID){
