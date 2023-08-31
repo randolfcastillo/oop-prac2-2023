@@ -6,9 +6,9 @@
 #include "ParkingLot.h"
 
 int main() {
-    ParkingLot parkingLot(2);
+    ParkingLot parkingLot(10);
     int vehicleIdCounter = 1;
-    int numVehicles=2;
+    int numVehicles=10;
      int numValidVehicles = 0; 
       Vehicle** vehicles = new Vehicle*[numVehicles];
      for (int i = 0; i < numVehicles; ++i) {
