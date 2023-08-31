@@ -52,6 +52,17 @@ bool ParkingLot :: unparkVehicle(int ID){
 std :: cout << "Vehicle not in the lot" << std :: endl;
 return false;
 }
+int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
+    int carsOverstayed = 0;
+    
+    for (int i = 0; i < count; i++) {
+        if (vehicles[i]->getParkingDuration() > maxParkingDuration) {
+            carsOverstayed++;
+        }
+    }
+
+    return carsOverstayed;
+}
 
 /*
 #include <iostream>
