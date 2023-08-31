@@ -5,6 +5,7 @@
 #include "Motorbike.h"
 #include "ParkingLot.h"
 
+
 int ParkingLot:: getCount(){ return count;}
 
 ParkingLot :: ParkingLot (int capacity){
@@ -23,7 +24,8 @@ bool ParkingLot :: full(){
 
 bool  ParkingLot :: parkVehicle(Vehicle* Vehicle){
     if (count<capacity){
-        vehicles[count++]=*vehicles;
+        vehicles[count]=Vehicle;
+        count++;
         return true;
     }
     else{
@@ -37,7 +39,7 @@ void ParkingLot :: unparkVehicle(int ID){
     for (int i=0; i<capacity;i++){
         if(vehicles[i]->getID()==ID){
            delete vehicles[i];
-           vehicles[i]==vehicles[--count];
+           vehicles[i]=vehicles[--count];
            return;
         }
     }

@@ -1,6 +1,4 @@
-
 #include <iostream>
-#include <vector> // For dynamic array of pointers
 #include "Vehicle.h"
 #include "Car.h"
 #include "Bus.h"
@@ -12,7 +10,9 @@ int main() {
     std::cout << "Enter the number of vehicles: ";
     std::cin >> numVehicles;
 
-    std::vector<Vehicle*> vehicles; // Vector to store pointers to vehicles
+    Vehicle** vehicles = new Vehicle*[numVehicles];
+
+    int numValidVehicles = 0; 
 
     for (int i = 0; i < numVehicles; ++i) {
         int vehicleType;
@@ -23,7 +23,7 @@ int main() {
         std::cout << "Enter the ID of the vehicle: ";
         std::cin >> vehicleID;
 
-        Vehicle* newVehicle;
+        Vehicle* newVehicle = nullptr;
 
         switch (vehicleType) {
             case 1:
@@ -37,20 +37,26 @@ int main() {
                 break;
             default:
                 std::cout << "Invalid vehicle type. Skipping..." << std::endl;
-                continue; // Skip this iteration
+                break;
         }
 
-        vehicles.push_back(newVehicle);
+        if (newVehicle != nullptr) {
+            vehicles[numValidVehicles++] = newVehicle;
+        }
     }
 
     std::cout << "Parking Durations:" << std::endl;
 
-    for (Vehicle* vehicle : vehicles) {
+    for (int i = 0; i < numValidVehicles; ++i) {
+        Vehicle* vehicle = vehicles[i];
         std::cout << "Vehicle ID: " << vehicle->getID()
-                  << ", Parking Duration: " << vehicle->getParkingDuration() << " seconds"
+                  << ", Parking Time: " << vehicle->getParkingDuration() << " seconds"
                   << std::endl;
-        delete vehicle; // Clean up dynamically allocated objects
+        delete vehicle; 
     }
+
+
+    delete[] vehicles;
 
     return 0;
 }
