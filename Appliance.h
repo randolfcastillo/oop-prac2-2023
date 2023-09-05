@@ -13,7 +13,7 @@ void turnOff();
 void set_isOn();
 bool get_isOn();
 int get_powerRating();
-void set_powerRating();
+void set_powerRating(int powerRating);
 virtual double getPowerConsumption();
 };
 

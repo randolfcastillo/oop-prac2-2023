@@ -10,7 +10,7 @@ Appliance :: Appliance(int powerRating){
     this->powerRating=powerRating;
 }
 
-void Appliance :: set_powerRating(){
+void Appliance :: set_powerRating(int powerRating){
    this ->powerRating=powerRating;
 }
 
