@@ -12,11 +12,19 @@ TV :: TV(int powerRating, double screenSize){
     this->screenSize=screenSize;
 }
 
+void TV:: setScreenSize(double screenSize){
+this->screenSize=screenSize;
+}
+
 double TV :: getScreenSize(){
     return screenSize;
 }
 
 double TV :: getPowerConsumption(){
+    if(isOn==true){
     PowerConsumption=powerRating*(screenSize/10);
-    return PowerConsumption;
+    return PowerConsumption;}
+    else{
+        return 0;
+    }
 }

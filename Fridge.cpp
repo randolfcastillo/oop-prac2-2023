@@ -13,11 +13,17 @@ Fridge :: Fridge (int powerRating, double volume){
 }
 
 double Fridge ::  getPowerConsumption(){
+    if (isOn==true){
     PowerConsumption=powerRating*24*(volume/100);
-    return PowerConsumption;
+    return PowerConsumption;}
+    else{ 
+        return 0;};
 }
 
 void Fridge :: setVolume(double volume){
     this->volume=volume;
 }
 
+double Fridge :: getVolume(){
+    return volume;
+}
