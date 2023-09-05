@@ -10,7 +10,7 @@ class TV : public Appliance {
   void setScreenSize(double screenSize);
 double getScreenSize();
 double getPowerConsumption();
-
+~TV();
 };
 
 

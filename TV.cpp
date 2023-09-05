@@ -28,3 +28,5 @@ double TV :: getPowerConsumption(){
         return 0;
     }
 }
+TV :: ~TV(){
+}

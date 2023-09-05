@@ -11,7 +11,7 @@ Fridge(int powerRating, double volume);
 void setVolume(double volume);
 double getVolume();
 double getPowerConsumption();
-
+~Fridge();
 
 };
 #endif

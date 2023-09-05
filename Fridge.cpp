@@ -27,3 +27,5 @@ void Fridge :: setVolume(double volume){
 double Fridge :: getVolume(){
     return volume;
 }
+Fridge::~Fridge() {
+}
