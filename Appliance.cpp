@@ -10,6 +10,18 @@ Appliance :: Appliance(int powerRating){
     this->powerRating=powerRating;
 }
 
+void Appliance :: set_powerRating(){
+   this ->powerRating=powerRating;
+}
+
+int Appliance :: get_powerRating(){
+    return powerRating;
+}
+
+
+bool Appliance :: get_isOn(){
+    return isOn;
+}
 void Appliance :: turnOff(){
     isOn=false;
 }
@@ -22,4 +34,5 @@ double Appliance :: getPowerConsumption(){
     PowerConsumption=0;
     return PowerConsumption;
 }
+
 

@@ -10,6 +10,10 @@ Appliance();
 Appliance(int powerRating);
 void turnOn();
 void turnOff();
+void set_isOn();
+bool get_isOn();
+int get_powerRating();
+void set_powerRating();
 virtual double getPowerConsumption();
 };
 

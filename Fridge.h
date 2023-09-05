@@ -4,7 +4,11 @@
 
 class Fridge : public Appliance{
 protected:
+double volume;
 public:
+void setVolume(double volume){
+    
+}
 };
 #endif
 
