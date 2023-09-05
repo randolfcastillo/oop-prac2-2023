@@ -6,9 +6,13 @@ class Fridge : public Appliance{
 protected:
 double volume;
 public:
-void setVolume(double volume){
-    
-}
+Fridge();
+Fridge(int powerRating, double volume);
+void setVolume(double volume);
+double getVolume();
+double getPowerConsumption();
+
+
 };
 #endif
 
