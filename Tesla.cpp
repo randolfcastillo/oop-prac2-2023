@@ -46,9 +46,15 @@ void Tesla :: chargeBattery(int mins){
     
 }
 void Tesla :: drive(int kms){
-while(batteryPercentage<100 && batteryPercentage<0){
-    emissions=74*kms;
-    batteryPercentage=batteryPercentage-(0.01*5*kms);
-}
+    std :: cout << "The battery is: " << batteryPercentage << std::endl;
 
+/*
+while(batteryPercentage<100 && batteryPercentage<0){
+    emissions=74*kms;  
+    batteryPercentage=batteryPercentage-(0.01*5*kms);    
+}
+*/
+emissions=74*kms;
+batteryPercentage=batteryPercentage-(0.01*5*kms);
+std :: cout << "The battery is: " << batteryPercentage << std::endl;
 }
