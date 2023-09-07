@@ -1,3 +1,4 @@
+
 #ifndef HOUSE_H
 #define HOUSE_H
 #include "Appliance.h"
@@ -6,7 +7,8 @@ class House{
     private:
     Appliance** appliances;
     int numAppliances;
-    int max_capacity;
+   // int max_capacity;
+    int currentAppliances;
     double total_power;
     public:
     House();
@@ -17,3 +19,4 @@ class House{
 };
 
 #endif
+

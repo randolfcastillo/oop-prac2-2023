@@ -1,38 +1,30 @@
-#include <iostream>
-#include "Appliance.h"
+
+
 #include "House.h"
-#include "Fridge.h"
 #include "TV.h"
-
-
+#include "Fridge.h"
+#include <iostream>
 
 int main() {
-    // Create appliances
-    Appliance* fridge = new Fridge(150, 15.5); // Assuming Fridge is a subclass of Appliance
-    Appliance* tv = new TV(100, 42.0); // Assuming TV is a subclass of Appliance
+  House myHouse(2);
 
-    // Create a house
-    House myHouse(2); // Create a house with space for 2 appliances
+  TV tv1(100, 50.0);
+  Fridge fridge1(200, 18.5); 
 
-    // Add appliances to the house
-    myHouse.addAppliance(fridge);
-    myHouse.addAppliance(tv);
+  if (myHouse.addAppliance(&tv1)) {
+    std::cout << "TV added to the house." << std::endl;
+  } else {
+    std::cout << "Cannot add TV. House is full." << std::endl;
+  }
 
-    // Turn on the appliances
-    fridge->turnOn();
-    tv->turnOn();
+  if (myHouse.addAppliance(&fridge1)) {
+    std::cout << "Fridge added to the house." << std::endl;
+  } else {
+    std::cout << "Cannot add Fridge. House is full." << std::endl;
+  }
 
-    // Get and display the total power consumption of the house
-    double totalPowerConsumption = myHouse.getTotalPowerConsumption();
-    std::cout << "Total Power Consumption: " << totalPowerConsumption << " watts" << std::endl;
+  double totalPowerConsumption = myHouse.getTotalPowerConsumption();
+  std::cout << "Total Power Consumption of the House: " << totalPowerConsumption << " watts" << std::endl;
 
-    // Turn off the appliances
-    fridge->turnOff();
-    tv->turnOff();
-
-    // Clean up: Delete dynamically allocated appliances and the appliances array
-    delete fridge;
-    delete tv;
-
-    return 0;
+  return 0;
 }

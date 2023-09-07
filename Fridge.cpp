@@ -7,6 +7,7 @@ volume=0;
 powerRating=0;
 isOn=false;
 }
+
 Fridge :: Fridge (int powerRating, double volume){
     this->powerRating=powerRating;
     this->volume=volume;
