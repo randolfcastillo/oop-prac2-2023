@@ -54,7 +54,9 @@ while(batteryPercentage<100 && batteryPercentage<0){
     batteryPercentage=batteryPercentage-(0.01*5*kms);    
 }
 */
+
 emissions=74*kms;
 batteryPercentage=batteryPercentage-(0.01*5*kms);
+
 std :: cout << "The battery is: " << batteryPercentage << std::endl;
 }

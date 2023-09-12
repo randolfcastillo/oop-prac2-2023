@@ -36,12 +36,15 @@ void Ford :: refuel(int litres){
 
 void Ford :: drive(int kms){
     int driven=0;;
+    litresOfFuel=60;
     while (litresOfFuel>0 && driven<=kms){
         litresOfFuel=litresOfFuel-((1/5)*driven);
-        driven++;
+        driven=driven+1;
     }
-    
+    std :: cout << litresOfFuel << std :: endl;
+    std :: cout << driven << std :: endl;
+    std :: cout << emissions << std :: endl;
     emissions=234*driven;
-
+    std :: cout << emissions << std :: endl;
 }
     
