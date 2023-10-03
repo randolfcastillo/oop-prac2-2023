@@ -9,7 +9,7 @@ class University{
   std :: string location;
   Course* courses;
   public: 
-  void addCourse(int id, std ::string name);
+  void addCourse(int course_id, std ::string name);
 
 };
 

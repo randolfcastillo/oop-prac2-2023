@@ -2,13 +2,14 @@
 #define COURSE_H
 #include <iostream>
 #include "University.h"
-
+#include "Person.h"
 class Course {
     protected: 
     std::string name;
-    int id;
+    int course_id;
+    Person** persons;
     public:
-   // void addPerson(Person*);
+    void addPerson(Person*);
 };
 
 
