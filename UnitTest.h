@@ -1,5 +1,6 @@
 // UnitTest.h
-
+#ifndef UNITTEST_H
+#define UNITTEST_H
 #include <iostream>
 #include "Addition.h"
 
@@ -19,3 +20,4 @@ private:
         // Add more tests here
     }
 };
+#endif
