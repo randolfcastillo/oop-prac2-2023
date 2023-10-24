@@ -5,7 +5,7 @@
 #include <tuple>
 
 class GameEntity{
-private:
+protected:
 std::tuple <int, int> position;
 char type;
 public:
