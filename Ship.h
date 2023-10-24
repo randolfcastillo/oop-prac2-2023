@@ -18,7 +18,7 @@ int y= std:: get<1> (current_position);
 
 x=x+dx;
 y=y+dy;
-std::tuple <int,int> NewPosition=std::tuple(x,y);
+std::tuple <int,int> NewPosition=std::make_tuple(x,y);
 setPos(NewPosition);
 }
 };
