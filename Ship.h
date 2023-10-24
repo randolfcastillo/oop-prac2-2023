@@ -6,7 +6,7 @@
 class Ship : public GameEntity{
 private:
 public:
-GameEntity ShipObject(int x, int y){
+ Ship(int x, int y){
     position=std::make_tuple(x,y);
     type='S';
 }
@@ -17,7 +17,8 @@ int y= std:: get<1> (current_position);
 
 x=x+dx;
 y=y+dy;
-position=std::tuple(x,y);
+std::tuple <int,int> NewPosition=std::tuple(x,y);
+setPos(NewPosition);
 }
 };
 

@@ -5,9 +5,9 @@
 class Explosion: public GameEntity, public Effect{
 private:
 public:
-GameEntity EffectObject(int x, int y){
+Explosion(int x, int y){
     position=std::make_tuple(x,y);
-    type-'E';
+    type='E';
 };
 
 void apply(GameEntity* entity){

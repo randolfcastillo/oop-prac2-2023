@@ -16,6 +16,10 @@ GameEntity(int x, int y, char type){
 std::tuple<int,int> getPos(){
     return position;
 };
+
+std::tuple <int, int> setPos(std::tuple <int, int> position){
+    this->position=position;
+}
 char getType(){
     return type;
 }
