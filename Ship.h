@@ -21,6 +21,8 @@ y=y+dy;
 std::tuple <int,int> NewPosition=std::make_tuple(x,y);
 setPos(NewPosition);
 }
+
+ void virtualFunction() override {};
 };
 
 #endif

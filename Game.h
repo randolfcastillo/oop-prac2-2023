@@ -42,9 +42,46 @@ std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth, int
     
     }
 void gameLoop(int maxIterations, double mineDistanceThreshold){
-    
+    for (int iteration = 0; iteration < maxIterations; ++iteration) {
+  // Move all Ship objects in entities
+        for (GameEntity* entity : entities) {
+            Ship* ship = dynamic_cast<Ship*>(entity);
+            if (ship != nullptr) {
+                ship->move(1, 0);
+            }
+        }
+   for (GameEntity* entity : entities) {
+            Ship* ship = dynamic_cast<Ship*>(entity);
+            if (ship != nullptr) {
+                for (GameEntity* mineEntity : entities) {
+                    Mine* mine = dynamic_cast<Mine*>(mineEntity);
+                    if (mine != nullptr) {
+                        std::tuple<int, int> shipPos = ship->getPos();
+                        std::tuple<int, int> minePos = mine->getPos();
+                        double distance = Utils::calculateDistance(shipPos, minePos);
+                        if (distance <= mineDistanceThreshold) {
+                            mine->explode();
+                        }
+                    }
+                }
+            }
+        }
+        bool allShipsDestroyed = true;
+        for (GameEntity* entity : entities) {
+            Ship* ship = dynamic_cast<Ship*>(entity);
+            if (ship != nullptr) {
+                allShipsDestroyed = false;
+                break;
+            }
+        }
+        if (allShipsDestroyed) {
+            std::cout << "Game over! All ships destroyed." << std::endl;
+            return;  // Terminate the game loop
+        }
+    }
 }
-
 };
+
+
 
 #endif

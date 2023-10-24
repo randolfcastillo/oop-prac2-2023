@@ -34,7 +34,9 @@ void setType(char type){
     this->type=type;
 }
 
+virtual void virtualFunction() {} // A virtual function, even if empty
 };
+
 #endif
 
 
