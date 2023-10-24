@@ -9,6 +9,10 @@ protected:
 std::tuple <int, int> position;
 char type;
 public:
+GameEntity(){
+position=std::make_tuple(0,0);
+type='0';
+};
 GameEntity(int x, int y, char type){
     position=std::make_tuple(x,y);
     this->type=type;
