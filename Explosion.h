@@ -10,9 +10,9 @@ Explosion(int x, int y){
     type='E';
 };
 
-void apply(GameEntity* entity){
-   entity->setPos(std::make_tuple(-1, -1));
-   entity->setType('X');
+void apply(GameEntity& entity){
+   position = std::make_tuple(-1, -1);
+    type = 'X';
 }
 };
 

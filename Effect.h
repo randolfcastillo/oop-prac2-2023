@@ -4,7 +4,7 @@
 class Effect{
     private:
     public:
-  virtual void apply(GameEntity* entity)=0;
+  virtual void apply(GameEntity& entity)=0;
 };
 
 #endif
