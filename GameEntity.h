@@ -27,6 +27,9 @@ void setPos(std::tuple <int, int> position){
 char getType(){
     return type;
 }
+void setType(char type){
+    this->type=type;
+}
 
 };
 #endif
