@@ -11,7 +11,7 @@ Explosion(int x, int y){
 };
 
 void apply(GameEntity* entity){
-   position=std::make_tuple(1,1);
+   entity->setPos(std::make_tuple(-1, -1));
    type='X';
 }
 };
