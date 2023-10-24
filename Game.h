@@ -13,12 +13,12 @@ class Game{
     std::vector<GameEntity*> entities;
     public:
     //Getter
- std::vector<GameEntity*>& getEntities() {
+ std::vector<GameEntity*>& get_entities() {
         return entities;
     }
 
     // Setter for entities
-    void setEntities(const std::vector<GameEntity*>& entities) {
+    void set_entities(const std::vector<GameEntity*>& entities) {
         this->entities=entities;
     }
 std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth, int gridHeight){
