@@ -6,6 +6,7 @@
 class Ship : public GameEntity{
 private:
 public:
+
  Ship(int x, int y){
     position=std::make_tuple(x,y);
     type='S';
