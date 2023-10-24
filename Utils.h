@@ -2,6 +2,8 @@
 #define UTILS_H
 #include <random>
 #include<tuple>
+#include "GameEntity.h"
+#include "Effect.h"
 class Utils{
     private:
     std::tuple<int,int> randposition;
@@ -12,6 +14,7 @@ class Utils{
     randposition=std::make_tuple(x,y);
     return randposition;
     }
+
     double calculateDistance(std::tuple<int, int>pos1, std::tuple<int,int>pos2){
      int x1 = std::get<0>(pos1);
     int y1 = std::get<1>(pos1);
