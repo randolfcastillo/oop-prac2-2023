@@ -41,6 +41,7 @@ std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth, int
     return newEntities;
     
     }
+    
 void gameLoop(int maxIterations, double mineDistanceThreshold){
     for (int iteration = 0; iteration < maxIterations; ++iteration) {
   // Move all Ship objects in entities
