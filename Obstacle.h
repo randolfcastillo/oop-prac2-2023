@@ -18,12 +18,7 @@ Obstacle(int x, int y){
 //     this-> active=active;
 // }
 bool isActive(){
-    if (active=false){
-        return false;
-    }
-    else{ return true;
-    }
-
+return active;
 }
 
 void apply(GridUnit& unit){
