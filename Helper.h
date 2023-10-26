@@ -2,6 +2,8 @@
 #define HELPER_H
 #include <tuple>
 #include <random>
+#include "GridUnit.h"
+#include "Modifier.h"
 class Helper{
     private:
     public:
