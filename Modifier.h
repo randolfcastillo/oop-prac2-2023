@@ -6,7 +6,6 @@
 #include <tuple>
 class Modifier{
 private:
-GridUnit unit;
 public:
 virtual void apply(GridUnit& unit)=0;
 };
