@@ -17,6 +17,7 @@ GameEntity(int x, int y, char type){
     position=std::make_tuple(x,y);
     this->type=type;
 };
+
 GameEntity(int x, int y){
     position=std::make_tuple(x,y);
 }
