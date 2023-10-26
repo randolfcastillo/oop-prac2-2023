@@ -25,8 +25,8 @@ std::tuple<int,int> getCoordinates(){
     return coordinates;
 }
 
-void setCoordinates(std::tuple<int,int> coordinates){
-    this->coordinates=coordinates;
+void setCoordinates(int x, int y){
+     coordinates=std::make_tuple(x,y);
 }
 
 void setEntity(char entity){

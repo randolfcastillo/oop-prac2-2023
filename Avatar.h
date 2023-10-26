@@ -17,8 +17,8 @@ int y= std:: get<1> (current_coordinates);
 
  x=x+dx;
  y=y+dy;
- std::tuple <int,int> NewCoordinates=std::make_tuple(x,y);
- setCoordinates(NewCoordinates);
+
+ setCoordinates(x,y);
 }
     
 
