@@ -2,8 +2,7 @@
 #define GRIDUNIT_H
 #include <iostream>
 #include <tuple>
-#include "Modifier.h"
-#include "Helper.h"
+
 class GridUnit{
 protected:
 std::tuple<int,int> coordinates;
