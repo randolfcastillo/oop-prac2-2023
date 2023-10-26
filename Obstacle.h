@@ -28,7 +28,8 @@ bool isActive(){
 
 void apply(GridUnit& unit){
     unit.setEntity('O');
-    unit.setActive(false);
+    active=false;
+    unit.setActive(active);
 }
 
 };
