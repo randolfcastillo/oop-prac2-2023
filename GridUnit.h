@@ -17,9 +17,14 @@ GridUnit(int x, int y, char entity){
     coordinates=std::make_tuple(x,y);
     this->entity=entity;
 }
-char getEntity(char entity){
+char getEntity(){
     return entity;
 }
+
+std::tuple<int,int> getCoordinates(){
+    return coordinates;
+}
+
 void setCoordinates(int x, int y){
     coordinates=std::make_tuple(x,y);
 }
