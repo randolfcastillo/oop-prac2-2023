@@ -7,6 +7,7 @@ class GridUnit{
 protected:
 std::tuple<int,int> coordinates;
 char entity;
+bool active;
 public:
 GridUnit(){
 coordinates=std::make_tuple(0,0);
@@ -32,6 +33,14 @@ void setCoordinates(int x, int y){
 void setEntity(char entity){
     this->entity=entity;
 }
+bool getActive(){
+    return active;
+}
+
+void setActive(bool active){
+    this-> active=active;
+}
+
 };
 
 #endif
