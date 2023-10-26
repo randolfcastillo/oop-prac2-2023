@@ -6,14 +6,14 @@
 #include "Obstacle.h"
 #include "Avatar.h"
 class GameSession{
-public:
-std::vector<GridUnit*> grid;
 private:
+std::vector<GridUnit*> grid;
+public:
 GameSession(){
 
 }
 std::vector<GridUnit*>& getGrid(){
-
+return grid;
 }
 void initGameSession(int numAvatars, int numObstacles, int gridWidth, int gridHeight){
 
