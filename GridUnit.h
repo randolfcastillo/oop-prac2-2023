@@ -9,10 +9,10 @@ protected:
 std::tuple<int,int> coordinates;
 char entity;
 public:
-GridUnit(){
-coordinates=std::make_tuple(0,0);
-entity='0';
-}
+// GridUnit(){
+// coordinates=std::make_tuple(0,0);
+// entity='0';
+// }
 GridUnit(int x, int y, char entity){
     coordinates=std::make_tuple(x,y);
     this->entity=entity;
