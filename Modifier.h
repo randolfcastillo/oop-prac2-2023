@@ -6,7 +6,7 @@
 class Modifier{
 private:
 public:
-virtual void apply(GridUnit& unity)=0;
+virtual void apply(GridUnit& unit)=0;
 };
 
 #endif
