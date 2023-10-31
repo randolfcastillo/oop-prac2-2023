@@ -24,7 +24,6 @@ void gameCycle(int maxCycles, double obstacleActivationDistance){
 }
 
 
-
 };
 
 #endif
